@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Linkedin, Github } from 'lucide-react'
+import { Mail, Linkedin, Github,Phone } from 'lucide-react'
 
 export default function Contact() {
   return (
@@ -13,7 +13,7 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
         className="text-3xl font-bold mb-8 text-black dark:text-white">Contact</motion.h2>
 
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-4 gap-6">
         {/* Email */}
         <a
           target="_blank"
@@ -65,6 +65,21 @@ export default function Contact() {
           </div>
           <p className="mt-2 font-medium text-black dark:text-white break-all">
             github.com/himanshuantal5640
+          </p>
+        </a>
+         {/* Mobile No. */}
+        <a
+          href="tel:+917351206107"
+          className="group rounded-2xl glass p-6 flex flex-col items-start justify-center 
+                     hover:bg-sky-500/10 hover:shadow-lg hover:shadow-sky-500/20 
+                     transition cursor-pointer"
+        >
+          <div className="flex items-center gap-3">
+            <Phone className="text-sky-500 group-hover:scale-110 transition" />
+            <p className="text-sm text-slate-500 dark:text-slate-400">Mobile No.</p>
+          </div>
+          <p className="mt-2 font-medium text-black dark:text-white break-all">
+            +91-7351206107
           </p>
         </a>
       </div>
