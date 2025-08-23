@@ -13,6 +13,7 @@ body {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='none' stroke='rgba(100,116,139,0.08)' d='M0 .5H40M.5 0v40'/%3E%3C/svg%3E");
   background-size: 40px 40px;
   background-attachment: fixed;
+    animation: moveGrid 40s linear infinite;
 }
 
 /* Glassmorphism effect */

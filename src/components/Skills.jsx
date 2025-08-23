@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const skills = ["HTML5", "CSS", "JavaScript", "React", "MERN", "Bootstrap"]
+const skills = ["HTML5", "CSS", "JavaScript", "React", "MERN", "Bootstrap","C","C++","Java"]
 
 export default function Skills() {
   return (
