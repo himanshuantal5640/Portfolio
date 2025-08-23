@@ -1,5 +1,7 @@
+
 // import React, { useEffect, useState } from 'react'
 // import { motion } from 'framer-motion'
+// import { Link } from 'react-scroll'
 
 // const titles = ['Frontend Developer', 'React Enthusiast', 'MERN Learner']
 
@@ -23,7 +25,7 @@
 //   }, [idx])
 
 //   return (
-//     <section className="section">
+//     <section id="hero" className="section">
 //       <div className="grid md:grid-cols-2 gap-10 items-center">
 //         <motion.div
 //           initial={{ opacity: 0, y: 24 }}
@@ -31,18 +33,22 @@
 //           viewport={{ once: true }}
 //           transition={{ duration: 0.6 }}
 //         >
-//           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-//             Hi, I'm <span className="text-sky-400">Himanshu Antal</span>
+//           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight text-black dark:text-white">
+//             Hi, I'm <span className="text-sky-500">Himanshu Antal</span>
 //           </h1>
-//           <p className="mt-2 text-lg text-slate-300">
-//             <span className="text-white">{display}</span><span className="animate-pulse">|</span>
+//           <p className="mt-2 text-lg text-slate-700 dark:text-slate-300">
+//             <span className="text-black dark:text-white">{display}</span><span className="animate-pulse">|</span>
 //           </p>
-//           <p className="mt-5 text-slate-300 leading-relaxed">
-//             I craft elegant, accessible and high-performance web interfaces. Currently strengthening my MERN skills to build robust end‑to‑end products.
+//           <p className="mt-5 text-slate-700 dark:text-slate-300 leading-relaxed">
+//             I craft elegant, accessible and high-performance web interfaces. Currently strengthening my MERN skills to build robust end-to-end products.
 //           </p>
 //           <div className="mt-6 flex gap-3">
-//             <a href="#projects" className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 transition shadow-glow">View Projects</a>
-//             <a href="#contact" className="px-5 py-2.5 rounded-xl glass">Contact</a>
+//             <Link to="projects" smooth duration={500} className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 transition shadow-glow text-white cursor-pointer">
+//               View Projects
+//             </Link>
+//             <Link to="contact" smooth duration={500} className="px-5 py-2.5 rounded-xl glass text-black dark:text-white cursor-pointer">
+//               Contact
+//             </Link>
 //           </div>
 //         </motion.div>
 //         <motion.div
@@ -54,8 +60,8 @@
 //         >
 //           <div className="aspect-[4/3] rounded-2xl glass grid place-items-center">
 //             <div className="text-center">
-//               <p className="text-sm text-slate-300">Portfolio Snapshot</p>
-//               <p className="text-xl font-semibold mt-2">Clean • Modern • Fast</p>
+//               <p className="text-sm text-slate-600 dark:text-slate-300">Portfolio Snapshot</p>
+//               <p className="text-xl font-semibold mt-2 text-black dark:text-white">Clean • Modern • Fast</p>
 //             </div>
 //           </div>
 //         </motion.div>
@@ -66,6 +72,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-scroll'
+import { Download } from 'lucide-react'
 
 const titles = ['Frontend Developer', 'React Enthusiast', 'MERN Learner']
 
@@ -106,15 +113,35 @@ export default function Hero() {
           <p className="mt-5 text-slate-700 dark:text-slate-300 leading-relaxed">
             I craft elegant, accessible and high-performance web interfaces. Currently strengthening my MERN skills to build robust end-to-end products.
           </p>
-          <div className="mt-6 flex gap-3">
-            <Link to="projects" smooth duration={500} className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 transition shadow-glow text-white cursor-pointer">
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              to="projects"
+              smooth
+              duration={500}
+              className="px-5 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-600 transition shadow-glow text-white cursor-pointer"
+            >
               View Projects
             </Link>
-            <Link to="contact" smooth duration={500} className="px-5 py-2.5 rounded-xl glass text-black dark:text-white cursor-pointer">
+            <Link
+              to="contact"
+              smooth
+              duration={500}
+              className="px-5 py-2.5 rounded-xl glass text-black dark:text-white cursor-pointer"
+            >
               Contact
-            </Link>
+            </Link> 
+            {/* Download CV Button */}
+            <a
+              href="/CV1.pdf"
+              download="Himanshu_Antal_CV.pdf"
+              className="px-5 py-2.5 rounded-xl glass flex items-center gap-2 text-black dark:text-white hover:bg-sky-500/10 transition cursor-pointer"
+            >
+              <Download size={18} /> Download CV
+            </a>
           </div>
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
