@@ -15,22 +15,23 @@ export default function Contact() {
 
       <div className="grid md:grid-cols-4 gap-6">
         {/* Email */}
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="mailto:himanshuantal26@gmail.com"
-          className="group rounded-2xl glass p-6 flex flex-col items-start justify-center 
-                     hover:bg-sky-500/10 hover:shadow-lg hover:shadow-sky-500/20 
-                     transition cursor-pointer"
-        >
-          <div className="flex items-center gap-3">
-            <Mail className="text-sky-500 group-hover:scale-110 transition" />
-            <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
-          </div>
-          <p className="mt-2 font-medium text-black dark:text-white">
-            himanshuantal26@gmail.com
-          </p>
-        </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://mail.google.com/mail/?view=cm&to=himanshuantal26@gmail.com"
+              className="group rounded-2xl glass p-6 flex flex-col items-start justify-center 
+                        hover:bg-sky-500/10 hover:shadow-lg hover:shadow-sky-500/20 
+                        transition cursor-pointer"
+            >
+              <div className="flex items-center gap-3">
+                <Mail className="text-sky-500 group-hover:scale-110 transition" />
+                <p className="text-sm text-slate-500 dark:text-slate-400">Email</p>
+              </div>
+              <p className="mt-2 font-medium text-black dark:text-white break-all">
+                himanshuantal26@gmail.com
+              </p>
+            </a>
+
 
         {/* LinkedIn */}
         <a

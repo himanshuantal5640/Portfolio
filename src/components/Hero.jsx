@@ -80,10 +80,11 @@ export default function Hero() {
           className="rounded-3xl glass p-8 shadow-glow bg-grid bg-[length:var(--tw-bg-size-grid)]"
         >
           <div className="aspect-[4/3] rounded-2xl glass grid place-items-center">
-            <div className="text-center">
+            {/* <div className="text-center">
               <p className="text-sm text-slate-600 dark:text-slate-300">Portfolio Snapshot</p>
               <p className="text-xl font-semibold mt-2 text-black dark:text-white">Clean • Modern • Fast</p>
-            </div>
+            </div> */}
+            <img src="./profile.jpg" alt="" className='h-3/4 w-3/4'/>
           </div>
         </motion.div>
       </div>
