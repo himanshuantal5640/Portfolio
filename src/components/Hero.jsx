@@ -174,7 +174,11 @@ export default function Hero() {
           </div>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Right Content with Circular Rotating Image */}
+=======
+          {/* Right Content with Circular Rotating Image */}
+>>>>>>> 6c27c5f02aa33bfff22d16291783b8ecb8dae649
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
